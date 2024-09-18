@@ -8,21 +8,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/toprated.css" />
   </head>
   <header>
-    The Top Rated Movies
-    <nav>
-      <ul>
-        <li>
-          <a class="toprated" href="#toprated">Top Rated</a>
-        </li>
-        <li>
-          <a class="featured" href="#featured">Featured</a>
-        </li>
-        <li>
-          <a class="in-theater" href="#intheater">In Theaters</a>
-        </li>
-      </ul>
+    <nav
+      class="navbar has-shadow is-white"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="assets/images/NL.png"
+            alt="site logo"
+            style="max-height: 100px"
+          />
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start items-inNav">
+          <a class="toprated navbar-item" href="#toprated">Top Rated</a>
+
+          <a class="featured navbar-item" href="#featured">Featured</a>
+
+          <a class="in-theater navbar-item" href="#intheater">In Theaters</a>
+        </div>
+
+        <!-- navbar start, navbar end -->
+      </div>
     </nav>
   </header>
   <body>
@@ -32,5 +45,4 @@
   <footer>
     <button id="back" class="btn">Back</button>
   </footer>
-  
 </html>
