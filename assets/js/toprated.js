@@ -1,6 +1,7 @@
 const toprated = document.querySelector(".toprated");
 const featured = document.querySelector(".featured");
 const theater = document.querySelector(".in-theater");
+let containerEl = document.getElementById("container-top");
 let tmdbApiKey = "aeaff9aa6a2dfe6e52db45e5c6947320";
 let urlTopTMDB = `https://api.themoviedb.org/3/movie/top_rated?api_key=${tmdbApiKey}`;
 let urlPlayingTMDB = `https://api.themoviedb.org/3/movie/now_playing?api_key=${tmdbApiKey}`;
@@ -12,8 +13,16 @@ function top_rated() {
     })
     .then(function (data) {
       console.log(data);
+
+      for (let i = 0; i < data.results.length; i++) {
+        let movieEl = document.createElement("div");
+        movieEl.textContent = data.results[i].title;
+        console.log(data.results[i].title);
+        containerEl.appendChild(movieEl);
+      }
     });
 }
+
 toprated.addEventListener("click", function (event) {
   event.preventDefault();
   window.location = "toprated.html";
@@ -27,3 +36,5 @@ theater.addEventListener("click", function (event) {
   event.preventDefault();
   window.location = "intheaters.html";
 });
+
+top_rated();
