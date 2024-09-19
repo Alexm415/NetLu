@@ -16,13 +16,18 @@ function top_rated() {
 
       for (let i = 0; i < data.results.length; i++) {
         let movieEl = document.createElement("div");
+        let imgEL = document.createElement("img");
+        let releaseDate = document.createElement("h2");
         movieEl.textContent = data.results[i].title;
+        imgEL.src = data.results[i].backdrop_path;
+        releaseDate = data.results[i].release_date;
         console.log(data.results[i].title);
         containerEl.appendChild(movieEl);
+        containerEl.appendChild(imgEL);
+        containerEl.append(releaseDate);
       }
     });
 }
-
 toprated.addEventListener("click", function (event) {
   event.preventDefault();
   window.location = "toprated.html";
@@ -36,5 +41,4 @@ theater.addEventListener("click", function (event) {
   event.preventDefault();
   window.location = "intheaters.html";
 });
-
 top_rated();
