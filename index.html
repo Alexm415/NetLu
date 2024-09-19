@@ -14,28 +14,42 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
 
   <body>
     <header>
-      <h1 class="hnetlu">Welcome to NetLu!</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#topmovies2023">Top Movies 2023</a>
-          </li>
-          <li>
-            <a href="#featured">Featured</a>
-          </li>
-          <li>
-            <a href="#intheater">In Theaters</a>
-          </li>
-        </ul>
-      </nav>
+      <!-- navbar start -->
+      <nav
+      class="navbar has-shadow is-white"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img
+            src="assets/images/NL.png"
+            alt="site logo"
+            style="max-height: 100px"
+          />
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start items-inNav">
+          <a class="toprated navbar-item" href="toprated.html">Top Rated</a>
+
+          <a class="featured navbar-item" href="featured.html">Featured</a>
+
+          <a class="in-theater navbar-item" href="intheaters.html">In Theaters</a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
     </header>
     <main id="container">
       
     </main>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/homepage.js"></script>
 
   </body>
