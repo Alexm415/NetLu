@@ -1,0 +1,14 @@
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+}
+
+#btn-search {
+  margin: 60px;
+  width: 90%;
+  background-color: rgb(241, 245, 248);
+  color: black;
+  font-size: 30px;
+  border: 10px solid rgb(125, 145, 128);
+  padding: 30px;
+}
