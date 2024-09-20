@@ -16,7 +16,7 @@ function top_rated() {
         card.classList.add("card", "cell", "is-col-min-8");
         // card image
         let cardImg = document.createElement("div");
-        cardImg.classList.add("card-image");
+        cardImg.classList.add("card-image", "cardz");
         let figure = document.createElement("figure");
         figure.classList.add("image", "is-3by4");
         let img = document.createElement("img");
@@ -27,10 +27,11 @@ function top_rated() {
         figure.appendChild(img);
         cardImg.appendChild(figure);
         // card title
-        let cardTitle = document.createElement('div');
+        let cardTitle = document.createElement("div");
+        cardTitle.classList.add('mTitle', 'overflow');
         cardTitle.textContent = data.results[i].title;
         // card year
-        let cardYear = document.createElement('div');
+        let cardYear = document.createElement("div");
         cardYear.textContent = data.results[i].release_date.substring(0, 4);
         // card appends
         card.appendChild(cardTitle);
@@ -41,4 +42,3 @@ function top_rated() {
     });
 }
 top_rated();
-

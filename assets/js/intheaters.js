@@ -28,6 +28,7 @@ function now_playing() {
         cardImg.appendChild(figure);
         // card title
         let cardTitle = document.createElement('div');
+        cardTitle.classList.add("overflow");
         cardTitle.textContent = data.results[i].title;
         // card year
         let cardYear = document.createElement('div');

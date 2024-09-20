@@ -27,7 +27,7 @@ function top_rated() {
         // let imgEL = document.createElement("img");
         let releaseDate = document.createElement("h2");
         movieEl.textContent = data.movie_results[i].title;
-        movieEl.classList.add("mTitle");
+        movieEl.classList.add("mTitle", "overflow");
         cardImg.classList.add("card-image", "cardz");
         let figure = document.createElement("figure");
         figure.classList.add("image", "is-3by4");
