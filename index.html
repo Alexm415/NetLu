@@ -14,47 +14,90 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body>
     <header>
       <!-- navbar start -->
       <nav
-      class="navbar has-shadow is-white"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img
-            src="assets/images/NL.png"
-            alt="site logo"
-            style="max-height: 100px"
-          />
-        </a>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-start items-inNav">
-          <a class="toprated navbar-item" href="toprated.html">Top Rated</a>
+        class="navbar has-shadow is-white"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img
+              src="assets/images/NL.png"
+              alt="site logo"
+              style="max-height: 100px"
+            />
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start items-inNav">
+            <a class="toprated navbar-item" href="toprated.html">Top Rated</a>
 
-          <a class="featured navbar-item" href="featured.html">Featured</a>
+            <a class="featured navbar-item" href="featured.html">Featured</a>
 
-          <a class="in-theater navbar-item" href="intheaters.html">In Theaters</a>
+            <a class="in-theater navbar-item" href="intheaters.html"
+              >In Theaters</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+    </header>
+    <main>
+      <button
+        id="btn-search"
+        class="button is-danger is-light is-outlined is-fullwidth"
+      >
+        Search Movie
+      </button>
+      <div id="container" class="grid"></div>
+    </main>
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-grey py-5 px-5">
+        <h3 class="title mb-6">Select Filters</h3>
+        <div class="field">
+          <label class="label">Genres</label>
+          <div class="control">
+            <div class="select">
+              <select id="select-genre">
+                <option>--Select--</option>
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="27">Horror</option>
+                <option value="878">Science-Fiction</option>
+                <option value="53">Thriller</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button id="btn-submit" type="submit" class="button is-link">Submit</button>
+          </div>
+          <div class="control">
+            <button id="btn-cancel" class="button is-link is-light">Cancel</button>
+          </div>
         </div>
       </div>
-    </nav>
-    <!-- navbar end -->
-    </header>
-    <main id="container">
-      
-    </main>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/homepage.js"></script>
-
   </body>
   <footer>
     <p>Thank you for visiting our site</p>
   </footer>
-
 </html>
