@@ -26,7 +26,17 @@ function now_playing() {
         );
         figure.appendChild(img);
         cardImg.appendChild(figure);
+        // card title
+        let cardTitle = document.createElement('div');
+        cardTitle.classList.add("overflow");
+        cardTitle.textContent = data.results[i].title;
+        // card year
+        let cardYear = document.createElement('div');
+        cardYear.textContent = data.results[i].release_date.substring(0, 4);
+        // card appends
+        card.appendChild(cardTitle);
         card.appendChild(cardImg);
+        card.appendChild(cardYear);
         containerEl.appendChild(card);
       }
     });

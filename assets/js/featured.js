@@ -19,10 +19,24 @@ function top_rated() {
       console.log(data);
 
       for (let i = 0; i < data.movie_results.length; i++) {
+        let card = document.createElement("div");
+        card.classList.add("card", "cell", "is-col-min-8");
+        // card image
+        let cardImg = document.createElement("div");
         let movieEl = document.createElement("div");
         // let imgEL = document.createElement("img");
         let releaseDate = document.createElement("h2");
         movieEl.textContent = data.movie_results[i].title;
+        movieEl.classList.add("mTitle", "overflow");
+        cardImg.classList.add("card-image", "cardz");
+        let figure = document.createElement("figure");
+        figure.classList.add("image", "is-3by4");
+        containerEl.appendChild(card);
+        card.appendChild(movieEl);
+        // figure.appendChild(imgEL);
+        cardImg.appendChild(figure);
+        card.appendChild(cardImg);
+
         // imgEL.src = data.results[i].poster_path;
         releaseDate = data.movie_results[i].year;
         console.log(data.movie_results[i].title);
@@ -45,15 +59,13 @@ function top_rated() {
             console.log(data1);
             let imgEL = document.createElement("img");
             imgEL.src = data1.poster;
-            containerEl.appendChild(imgEL);
+            figure.appendChild(imgEL);
           });
-        containerEl.appendChild(movieEl);
+
         // containerEl.appendChild(imgEL);
-        containerEl.append(releaseDate);
+        card.append(releaseDate);
       }
     });
 }
 
-function images() {}
 top_rated();
-images();
