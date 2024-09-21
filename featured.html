@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Movies 2023</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <header>
+    <nav
+      class="navbar has-shadow is-white"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img
+            src="assets/images/NL.png"
+            alt="site logo"
+            style="max-height: 100px"
+          />
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start items-inNav">
+          <a class="toprated navbar-item" href="toprated.html">Top Rated</a>
+
+          <a class="featured navbar-item" href="featured.html">Featured</a>
+
+          <a class="in-theater navbar-item" href="intheaters.html"
+            >In Theaters</a
+          >
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <main id="container-top" class="grid mt-2"></main>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/featured.js"></script>
+  </body>
+  <footer>
+    <button id="back" class="btn">Back</button>
+  </footer>
+</html>
