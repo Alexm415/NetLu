@@ -51,11 +51,49 @@ submitBtn.addEventListener("click", function () {
           "src",
           `https://image.tmdb.org/t/p/original${data.results[i].poster_path}`
         );
+
+        figure.appendChild(img);
+        cardImg.appendChild(figure);
+        card.appendChild(cardImg);
+        containerEl.appendChild(card);
+      }
+      localStorage.setItem("genreId", JSON.stringify(genreId));
+      console.log(genreId);
+    });
+  modal.classList.remove("is-active");
+});
+function renderCard() {
+  let cards = JSON.parse(localStorage.getItem("genreId"));
+  let url = `https://api.themoviedb.org/3/discover/movie?&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${cards}&api_key=aeaff9aa6a2dfe6e52db45e5c6947320`;
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data.results);
+      containerEl.textContent = "";
+      // create a card for each movie
+      for (let i = 0; i < 5; i++) {
+        // card container
+        let card = document.createElement("div");
+        card.classList.add("card", "cell");
+        // card image
+        let cardImg = document.createElement("div");
+        cardImg.classList.add("card-image");
+        let figure = document.createElement("figure");
+        figure.classList.add("image", "is-3by4");
+        let img = document.createElement("img");
+        img.setAttribute(
+          "src",
+          `https://image.tmdb.org/t/p/original${data.results[i].poster_path}`
+        );
+
         figure.appendChild(img);
         cardImg.appendChild(figure);
         card.appendChild(cardImg);
         containerEl.appendChild(card);
       }
     });
-  modal.classList.remove("is-active");
-});
+  //containerEl.append(card);
+}
+renderCard();
