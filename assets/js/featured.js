@@ -64,6 +64,12 @@ function top_rated() {
 
         // containerEl.appendChild(imgEL);
         card.append(releaseDate);
+        
+        const buttonEl = document.querySelector("#backButton"); 
+
+buttonEl.addEventListener("click", function () {
+  window.location = "./index.html";
+});
       }
     });
 }
