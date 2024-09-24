@@ -4,11 +4,9 @@
 }
 #nav {
   height: 70px;
-  margin-bottom: 100px;
 }
 body {
   background-image: url(../images/movies.png);
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,6 +32,7 @@ body {
   padding: 10px;
   background-image: linear-gradient(180deg, red, rgba(230, 151, 151, 0.564));
   border-radius: 30px;
+  padding-top: 10px;
 }
 #footer {
   color: rgb(236, 230, 230);
