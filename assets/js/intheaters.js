@@ -38,7 +38,14 @@ function now_playing() {
         card.appendChild(cardImg);
         card.appendChild(cardYear);
         containerEl.appendChild(card);
+        
+        const buttonEl = document.querySelector("#backButton"); 
+
+buttonEl.addEventListener("click", function () {
+  window.location = "./index.html";
+});
       }
+      
     });
 }
 
