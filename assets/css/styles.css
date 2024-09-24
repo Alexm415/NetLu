@@ -7,7 +7,18 @@
 }
 
 .overflow {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  margin: 10px;
+  background-color: #ededee;
+  color: rgb(15, 14, 14);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
 }
