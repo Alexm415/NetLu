@@ -1,10 +1,4 @@
-* {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 20px;
-}
-#nav {
-  height: 70px;
-}
+
 body {
   background-image: url(../images/movies.png);
   background-position: center;
@@ -22,8 +16,7 @@ body {
 }
 
 #btn-search {
-  position: fixed;
-  margin: 470px;
+  margin: auto;
   width: 300px;
   background-color: black;
   color: rgb(255, 255, 255);
@@ -36,14 +29,14 @@ body {
 }
 #footer {
   color: rgb(236, 230, 230);
-  padding-left: 500px;
-  padding-top: 300px;
+  /* padding-left: 500px;*/
+  /* padding-top: 300px;  */
 }
 .copyright {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
-  padding-left: 100px;
-  padding-top: 200px;
+  /* padding-left: 100px;
+  padding-top: 200px; */
 }
 #container {
   padding: 100px;

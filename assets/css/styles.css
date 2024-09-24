@@ -1,7 +1,48 @@
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+}
+
 .cardz {
   padding: 10px 0px;
   margin: auto;
 }
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover .overflow {
+  overflow: visible;
+  transition-delay: 0.2s;
+}
+
+#container-top:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition-delay: 0.2s;
+}
+
+#container-top .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.2s;
+}
+
+#container-playing:hover .card {
+  opacity: 0.5;
+  filter: blur(3px);
+  transition-delay: 0.2s;
+}
+
+#container-playing .card:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.2s;
+}
+
 .mTitle {
   margin: -2px;
 }
@@ -21,4 +62,8 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
+}
+
+#nav {
+  height: 70px;
 }
